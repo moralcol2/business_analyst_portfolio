@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///C:/Users/redbe/Downloads/index_3.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colin Moral — Business Analyst Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Colin Moral — Business Analyst Portfolio2_files/css2" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1B2127;
+    --bg-alt:#222A32;
+    --paper:#F4F1EA;
+    --paper-dim:#C9C5BC;
+    --accent:#C74634;
+    --accent-soft:#E8957F;
+    --line:#3A4450;
+    --green:#4FAE7A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .display{font-family:'Archivo Expanded',sans-serif;}
+
+  /* ===== Top nav ===== */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(27,33,39,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1100px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 24px;
+  }
+  .nav-name{font-family:'Archivo Expanded',sans-serif; font-weight:700; font-size:1.05rem; letter-spacing:0.02em;}
+  .nav-links{display:flex; gap:28px; font-size:0.9rem;}
+  .nav-links a{color:var(--paper-dim); text-decoration:none; transition:color .2s;}
+  .nav-links a:hover{color:var(--accent-soft);}
+
+  /* ===== Hero ===== */
+  .hero{
+    max-width:1100px; margin:0 auto;
+    padding:80px 24px 40px;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--accent-soft); margin-bottom:18px;
+  }
+  h1{
+    font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;
+    font-size:clamp(2.4rem, 6vw, 4rem);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    max-width:780px;
+  }
+  .hero p.lede{
+    margin-top:22px; max-width:620px;
+    font-size:1.08rem; color:var(--paper-dim);
+  }
+  .hero-links{
+    margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'IBM Plex Mono',monospace; font-size:0.85rem;
+    padding:11px 20px; border-radius:3px;
+    text-decoration:none; transition:all .2s;
+    border:1px solid var(--line);
+    color:var(--paper);
+  }
+  .btn:hover{border-color:var(--accent-soft); color:var(--accent-soft);}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:var(--paper);}
+  .btn.primary:hover{background:var(--accent-soft); border-color:var(--accent-soft); color:var(--bg);}
+
+  /* ===== Pipeline diagram (signature element) ===== */
+  .pipeline{
+    max-width:1100px; margin:60px auto 0; padding:0 24px;
+  }
+  .pipeline-track{
+    display:flex; align-items:stretch; gap:0;
+    border:1px solid var(--line); border-radius:6px;
+    overflow:hidden; background:var(--bg-alt);
+  }
+  .stage{
+    flex:1; padding:26px 20px; position:relative;
+    border-right:1px solid var(--line);
+  }
+  .stage:last-child{border-right:none;}
+  .stage-num{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem;
+    color:var(--paper-dim); letter-spacing:0.1em; text-transform:uppercase;
+  }
+  .stage-val{
+    font-family:'Archivo Expanded',sans-serif; font-weight:800;
+    font-size:2.1rem; margin-top:8px; color:var(--paper);
+  }
+  .stage-label{
+    font-size:0.85rem; color:var(--paper-dim); margin-top:4px;
+  }
+  .stage::after{
+    content:'→';
+    position:absolute; right:-2px; top:50%; transform:translateY(-50%);
+    color:var(--accent); font-size:1.2rem; z-index:2;
+    font-family:'IBM Plex Mono',monospace;
+  }
+  .stage:last-child::after{content:none;}
+  .stage:nth-child(1) .stage-val{color:var(--paper);}
+  .stage:nth-child(2) .stage-val{color:var(--accent-soft);}
+  .stage:nth-child(3) .stage-val{color:var(--accent-soft);}
+  .stage:nth-child(4) .stage-val{color:var(--green);}
+  .pipeline-caption{
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--paper-dim);
+    margin-top:12px; text-align:right;
+  }
+
+  /* ===== Sections ===== */
+  section{max-width:1100px; margin:0 auto; padding:90px 24px;}
+  .section-head{
+    display:flex; align-items:baseline; gap:18px;
+    border-bottom:1px solid var(--line); padding-bottom:18px; margin-bottom:40px;
+  }
+  .section-num{
+    font-family:'IBM Plex Mono',monospace; color:var(--accent); font-size:0.95rem;
+  }
+  h2{
+    font-family:'Archivo Expanded',sans-serif; font-weight:700;
+    font-size:1.7rem; letter-spacing:-0.01em;
+  }
+
+  /* ===== Project cards ===== */
+  .project{
+    display:grid; grid-template-columns:1fr; gap:0;
+    border:1px solid var(--line); border-radius:6px;
+    background:var(--bg-alt); overflow:hidden; margin-bottom:32px;
+  }
+  .project-img{
+    width:100%; background:#10141A;
+    display:flex; align-items:center; justify-content:center;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .project-img img{width:100%; height:auto; object-fit:contain; display:block;}
+  .project-img .placeholder{
+    font-family:'IBM Plex Mono',monospace; color:var(--paper-dim);
+    font-size:0.85rem; text-align:center; padding:40px;
+    border:1px dashed var(--line); margin:24px; border-radius:4px;
+    width:calc(100% - 48px);
+  }
+  .project-body{padding:28px 30px 30px;}
+  .project-tag{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-soft);
+    margin-bottom:10px;
+  }
+  .project-body h3{
+    font-family:'Archivo Expanded',sans-serif; font-size:1.35rem; font-weight:700;
+    margin-bottom:10px;
+  }
+  .project-body p{color:var(--paper-dim); font-size:0.97rem; max-width:680px;}
+  .project-stats{
+    display:flex; gap:28px; flex-wrap:wrap; margin:22px 0;
+  }
+  .stat{font-family:'IBM Plex Mono',monospace;}
+  .stat-val{font-size:1.4rem; font-weight:600; color:var(--paper);}
+  .stat-label{font-size:0.74rem; color:var(--paper-dim); text-transform:uppercase; letter-spacing:0.08em;}
+  .tools{
+    display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;
+  }
+  .tool-chip{
+    font-family:'IBM Plex Mono',monospace; font-size:0.74rem;
+    padding:5px 11px; border:1px solid var(--line); border-radius:20px;
+    color:var(--paper-dim);
+  }
+  .project-links{margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;}
+
+  /* Coming soon card */
+  .project.upcoming{
+    border-style:dashed;
+    background:transparent;
+  }
+  .project.upcoming .project-body{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    padding:30px;
+  }
+  .project.upcoming h3{margin-bottom:4px;}
+  .project.upcoming p{margin:0;}
+
+  /* ===== About / footer ===== */
+  .about-grid{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:50px;
+  }
+  .about-grid p{color:var(--paper-dim); margin-bottom:16px; max-width:560px;}
+  .skills-col h4{
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--accent-soft);
+    margin-bottom:14px;
+  }
+  .skills-col ul{list-style:none; font-size:0.92rem; color:var(--paper-dim);}
+  .skills-col li{padding:6px 0; border-bottom:1px solid var(--line);}
+  .skills-col li:last-child{border-bottom:none;}
+
+  footer{
+    max-width:1100px; margin:0 auto; padding:40px 24px 70px;
+    border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px;
+  }
+  footer p{font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--paper-dim);}
+  footer .foot-links{display:flex; gap:18px;}
+  footer a{color:var(--paper-dim); text-decoration:none; font-size:0.85rem;}
+  footer a:hover{color:var(--accent-soft);}
+
+  @media (max-width: 720px){
+    .pipeline-track{flex-direction:column;}
+    .stage{border-right:none; border-bottom:1px solid var(--line);}
+    .stage:last-child{border-bottom:none;}
+    .stage::after{content:'↓'; right:50%; top:auto; bottom:-14px; transform:translateX(50%);}
+    .about-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-name">Colin Moral</div>
+    <nav class="nav-links">
+      <a href="file:///C:/Users/redbe/Downloads/index_3.html#projects">Projects</a>
+      <a href="file:///C:/Users/redbe/Downloads/index_3.html#about">Background</a>
+      <a href="https://github.com/moralcol2" target="_blank">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Business / Data Analyst Portfolio</div>
+  <h1>I built dashboards to understand my own numbers.<br>Then my team's. Then my clients'.</h1>
+  <p class="lede">
+    What started as a way to track my own pipeline at Oracle became a tool my
+    team adopted — and at Flex, the cost models I built to understand client
+    spend became part of how we sold. This portfolio rebuilds those tools with
+    synthetic data, for business and data analyst roles.
+  </p>
+  <div class="hero-links">
+    <a href="file:///C:/Users/redbe/Downloads/index_3.html#projects" class="btn primary">View Projects</a>
+    <a href="mailto:youremail@example.com" class="btn">Contact</a>
+    <a href="https://github.com/moralcol2/business-analyst-portfolio" class="btn" target="_blank">GitHub Repo ↗</a>
+  </div>
+</div>
+
+<!-- Signature pipeline diagram -->
+<div class="pipeline">
+  <div class="pipeline-track">
+    <div class="stage">
+      <div class="stage-num">Weekly Activity</div>
+      <div class="stage-val">~300/wk</div>
+      <div class="stage-label">Calls &amp; Emails (Touchpoints)</div>
+    </div>
+    <div class="stage">
+      <div class="stage-num">Monthly Quota</div>
+      <div class="stage-val">12/mo</div>
+      <div class="stage-label">Intro Calls (Quota)</div>
+    </div>
+    <div class="stage">
+      <div class="stage-num">Monthly Quota</div>
+      <div class="stage-val">4/mo</div>
+      <div class="stage-label">Demos Booked (Quota)</div>
+    </div>
+    <div class="stage">
+      <div class="stage-num">Quarterly Target</div>
+      <div class="stage-val">$250K</div>
+      <div class="stage-label">Pipeline / Quarter</div>
+    </div>
+  </div>
+  <div class="pipeline-caption mono">Oracle Houston Inside Sales — Territory Funnel, FY2023 (Synthetic Data)</div>
+</div>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="section-head">
+    <span class="section-num mono">01</span>
+    <h2>Projects</h2>
+  </div>
+
+  <!-- Project 1: Oracle Pipeline Dashboard -->
+  <div class="project">
+    <div class="project-img">
+      <!-- Replace this placeholder div with: <img src="oracle-dashboard.png" alt="Oracle Pipeline Dashboard"> -->
+      <div class="placeholder">
+        Dashboard screenshot goes here<br>
+        <span style="opacity:0.6;">(export Dashboard tab from Excel as PNG, save as oracle-dashboard.png)</span>
+      </div>
+    </div>
+    <div class="project-body">
+      <div class="project-tag">Excel · Pipeline Analytics</div>
+      <h3>Oracle Sales Pipeline Dashboard</h3>
+      <p>
+        I built this dashboard for myself — a way to track my own pipeline and activity in
+        Excel. After a few 1:1s with my manager where I walked her through how I was
+        organizing my numbers, she liked the format enough to share it with her director,
+        and it was rolled out for the broader team to use. Tracks daily call/email activity,
+        intro call and demo conversion, quota attainment, and quarterly pipeline value
+        against a $1M annual target.
+      </p>
+      <div class="project-stats">
+        <div class="stat">
+          <div class="stat-val">1,300</div>
+          <div class="stat-label">Daily Records</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">5</div>
+          <div class="stat-label">Rep Territories</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">6</div>
+          <div class="stat-label">Workbook Views</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">95</div>
+          <div class="stat-label">Live Formulas</div>
+        </div>
+      </div>
+      <p style="font-size:0.88rem;">
+        <strong style="color:var(--paper);">Key insight:</strong> Modeled realistic day-of-week
+        activity patterns (e.g. calls concentrated Tue/Thu, emails Mon/Wed/Fri for top performers)
+        to surface coaching opportunities for reps below quota pace.
+      </p>
+      <div class="tools">
+        <span class="tool-chip">Excel</span>
+        <span class="tool-chip">Pivot Tables</span>
+        <span class="tool-chip">Conditional Formatting</span>
+        <span class="tool-chip">Tableau Public</span>
+        <span class="tool-chip">Synthetic Data Modeling</span>
+      </div>
+      <div class="project-links">
+        <a href="file:///C:/Users/redbe/Downloads/oracle-pipeline-dashboard.xlsx" class="btn" download="">Download Workbook (.xlsx)</a>
+        <a href="file:///C:/Users/redbe/Downloads/index_3.html#" class="btn" target="_blank">Tableau Public ↗</a>
+        <a href="https://github.com/moralcol2/business-analyst-portfolio" class="btn" target="_blank">Source &amp; Methodology ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 2: Flex TCO Model — placeholder -->
+  <div class="project upcoming">
+    <div class="project-body">
+      <div>
+        <div class="project-tag">Excel · Cost Modeling — In Progress</div>
+        <h3>Flex Technology Group — Multi-Site TCO &amp; Scenario Model</h3>
+        <p>Total cost of ownership and device-usage scenario model delivered to C-suite stakeholders, rebuilt with synthetic multi-site data.</p>
+      </div>
+      <span class="tool-chip mono">Coming soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="section-head">
+    <span class="section-num mono">02</span>
+    <h2>Background</h2>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p>
+        I spent my career in enterprise sales at Oracle and Flex Technology Group, where I built
+        the analytical tools my territory and leadership relied on — pipeline dashboards, TCO
+        models, and quota tracking systems. That work was always the part of the job I cared
+        about most: turning raw activity data into decisions.
+      </p>
+      <p>
+        I'm now formalizing that into a data analytics career, with a focus on working
+        alongside stakeholders and leadership to turn data into strategic decisions —
+        the same kind of work I did at Flex when building cost models for client and
+        executive review. I hold a B.S. in Industrial Distribution (CS &amp; Business
+        minors) from Texas A&amp;M, FINRA Series 6/63/SIE licenses, and completed the
+        Google Data Analytics Professional Certificate and a Data Analytics in Healthcare
+        Certificate in May 2026.
+      </p>
+      <p>
+        This portfolio uses synthetic datasets modeled on real territory structures and
+        benchmarks from my own performance — built to demonstrate analytical approach, not to
+        disclose proprietary employer data.
+      </p>
+    </div>
+    <div class="skills-col">
+      <h4>Tools &amp; Methods</h4>
+      <ul>
+        <li>Excel (advanced formulas, pivot tables, dashboards)</li>
+        <li>Tableau Public / Power BI</li>
+        <li>Python (fundamentals)</li>
+        <li>SQL (fundamentals)</li>
+        <li>CRM systems — Microsoft Dynamics, Salesforce, Oracle Customer Connect</li>
+        <li>Pipeline &amp; quota analytics</li>
+        <li>TCO / scenario modeling</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="mono">© 2026 Colin Moral — Built for recruiter review</p>
+  <div class="foot-links">
+    <a href="https://github.com/moralcol2" target="_blank">GitHub</a>
+    <a href="file:///C:/Users/redbe/Downloads/index_3.html#" target="_blank">LinkedIn</a>
+    <a href="mailto:youremail@example.com">Email</a>
+  </div>
+</footer>
+
+
+
+</body></html>
