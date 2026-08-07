@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///C:/Users/redbe/Downloads/index_3.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colin Moral — Business Analyst Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link href="./Colin Moral — Business Analyst Portfolio2_files/css2" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#1B2127;
@@ -235,8 +235,8 @@
   <div class="nav">
     <div class="nav-name">Colin Moral</div>
     <nav class="nav-links">
-      <a href="file:///C:/Users/redbe/Downloads/index_3.html#projects">Projects</a>
-      <a href="file:///C:/Users/redbe/Downloads/index_3.html#about">Background</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">Background</a>
       <a href="https://github.com/moralcol2" target="_blank">GitHub ↗</a>
     </nav>
   </div>
@@ -252,7 +252,7 @@
     synthetic data, for business and data analyst roles.
   </p>
   <div class="hero-links">
-    <a href="file:///C:/Users/redbe/Downloads/index_3.html#projects" class="btn primary">View Projects</a>
+    <a href="#projects" class="btn primary">View Projects</a>
     <a href="mailto:youremail@example.com" class="btn">Contact</a>
     <a href="https://github.com/moralcol2/business-analyst-portfolio" class="btn" target="_blank">GitHub Repo ↗</a>
   </div>
@@ -296,7 +296,9 @@
   <div class="project">
     <div class="project-img">
       <!-- Replace this placeholder div with: <img src="oracle-dashboard.png" alt="Oracle Pipeline Dashboard"> -->
-      <img src="oracle_dashboard.png" alt="Oracle Sales Pipeline Dashboard">
+      <div class="placeholder">
+        Dashboard screenshot goes here<br>
+        <span style="opacity:0.6;">(export Dashboard tab from Excel as PNG, save as oracle-dashboard.png)</span>
       </div>
     </div>
     <div class="project-body">
@@ -341,22 +343,65 @@
         <span class="tool-chip">Synthetic Data Modeling</span>
       </div>
       <div class="project-links">
-        <a href="file:///C:/Users/redbe/Downloads/oracle-pipeline-dashboard.xlsx" class="btn" download="">Download Workbook (.xlsx)</a>
-        <a href="file:///C:/Users/redbe/Downloads/index_3.html#" class="btn" target="_blank">Tableau Public ↗</a>
+        <a href="oracle-pipeline-dashboard.xlsx" class="btn" download>Download Workbook (.xlsx)</a>
+        <a href="#" class="btn" target="_blank">Tableau Public ↗</a>
         <a href="https://github.com/moralcol2/business-analyst-portfolio" class="btn" target="_blank">Source &amp; Methodology ↗</a>
       </div>
     </div>
   </div>
 
-  <!-- Project 2: Flex TCO Model — placeholder -->
-  <div class="project upcoming">
+  <!-- Project 2: Flex TCO Model -->
+  <div class="project">
+    <div class="project-img">
+      <img src="flex-dashboard.png" alt="Flex TCO Dashboard">
+    </div>
     <div class="project-body">
-      <div>
-        <div class="project-tag">Excel · Cost Modeling — In Progress</div>
-        <h3>Flex Technology Group — Multi-Site TCO &amp; Scenario Model</h3>
-        <p>Total cost of ownership and device-usage scenario model delivered to C-suite stakeholders, rebuilt with synthetic multi-site data.</p>
+      <div class="project-tag">Tableau · SQL · Excel · Cost Modeling</div>
+      <h3>Flex Technology Group — Multi-Site Print Fleet TCO &amp; Scenario Model</h3>
+      <p>
+        Built and delivered to CFOs, CIOs, and COOs at enterprise accounts — analyzing
+        device usage, vendor fragmentation, and cost-per-click data across multiple locations
+        to produce total cost of ownership models and deployment scenario recommendations
+        supporting major capital decisions. Rebuilt here with synthetic data across a
+        5-site Houston-area client, comparing a fragmented 16-device current state against
+        a consolidated 6-device Flex proposal.
+      </p>
+      <div class="project-stats">
+        <div class="stat">
+          <div class="stat-val">16→6</div>
+          <div class="stat-label">Device Reduction</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">4</div>
+          <div class="stat-label">Vendors Consolidated</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">$116K</div>
+          <div class="stat-label">3-Year Savings</div>
+        </div>
+        <div class="stat">
+          <div class="stat-val">49%</div>
+          <div class="stat-label">Cost Reduction</div>
+        </div>
       </div>
-      <span class="tool-chip mono">Coming soon</span>
+      <p style="font-size:0.88rem;">
+        <strong style="color:var(--paper);">Key insight:</strong> Clients rarely have
+        visibility into their total print spend across all sites in one view. The diagnostic
+        phase — showing fragmented vendor spend before introducing the proposal — was
+        consistently the moment that opened the real conversation.
+      </p>
+      <div class="tools">
+        <span class="tool-chip">Tableau Public</span>
+        <span class="tool-chip">MySQL</span>
+        <span class="tool-chip">Excel</span>
+        <span class="tool-chip">CTEs &amp; Window Functions</span>
+        <span class="tool-chip">TCO Modeling</span>
+        <span class="tool-chip">Synthetic Data</span>
+      </div>
+      <div class="project-links">
+        <a href="https://public.tableau.com/app/profile/colin.moral/viz/Multi-SitePrintFleetTCOModel/Dashboard1" class="btn primary" target="_blank">View Live Dashboard ↗</a>
+        <a href="https://github.com/moralcol2/business-analyst-portfolio" class="btn" target="_blank">SQL &amp; Methodology ↗</a>
+      </div>
     </div>
   </div>
 </section>
@@ -396,7 +441,7 @@
         <li>Excel (advanced formulas, pivot tables, dashboards)</li>
         <li>Tableau Public / Power BI</li>
         <li>Python (fundamentals)</li>
-        <li>SQL (fundamentals)</li>
+        <li>SQL (CTEs, JOINs, window functions — MySQL)</li>
         <li>CRM systems — Microsoft Dynamics, Salesforce, Oracle Customer Connect</li>
         <li>Pipeline &amp; quota analytics</li>
         <li>TCO / scenario modeling</li>
@@ -409,11 +454,10 @@
   <p class="mono">© 2026 Colin Moral — Built for recruiter review</p>
   <div class="foot-links">
     <a href="https://github.com/moralcol2" target="_blank">GitHub</a>
-    <a href="file:///C:/Users/redbe/Downloads/index_3.html#" target="_blank">LinkedIn</a>
+    <a href="#" target="_blank">LinkedIn</a>
     <a href="mailto:youremail@example.com">Email</a>
   </div>
 </footer>
 
-
-
-</body></html>
+</body>
+</html>
